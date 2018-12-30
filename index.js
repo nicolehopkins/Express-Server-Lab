@@ -42,7 +42,7 @@ app.get('/gif', (req, res) => {
     const apiKey = 'AkRKip6jh2ycngwr57ZoTd5WlTzcDTr2';
     request(`https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${req.query.search}`, {encoding: null}, function (err, response, body) {
 
-        res.send(body);
+        res.json(body);
     });
 
 });
